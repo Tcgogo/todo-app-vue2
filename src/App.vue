@@ -52,10 +52,10 @@ export default {
   },
   mounted() {
     bus.$on('changeComplete', (id) => {
-      localStorage.setItem('todos', JSON.stringify(this.todos));
       this.todos.forEach((item) => {
         id === item.id ? item.complete = !item.complete : '';
-      })
+      });
+      localStorage.setItem('todos', JSON.stringify(this.todos));
     })
   },
   updated() {
