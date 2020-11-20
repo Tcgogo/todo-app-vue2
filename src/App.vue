@@ -57,9 +57,15 @@ export default {
       });
       localStorage.setItem('todos', JSON.stringify(this.todos));
     })
+
+    bus.$on('deleteTodo', (id) => {
+      this.todos.forEach((item,index) => {
+        id === item.id ? this.todos.splice(index,1) : '';
+      });
+      localStorage.setItem('todos', JSON.stringify(this.todos));
+    })
   },
   updated() {
-    console.log(1)
     localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 };
