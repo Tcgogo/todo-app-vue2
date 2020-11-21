@@ -33,7 +33,7 @@ export default {
     },
     deleteTodo() {
       bus.$emit("deleteTodo", this.todo.id);
-    }
+    },
   },
 };
 </script>
@@ -43,17 +43,18 @@ export default {
 .content-item {
   background: rgb(255, 255, 255);
   position: relative;
-  height: 1rem;
-  padding: 0.2rem;
+  min-height: 1rem;
+  padding: 0.2rem 30px 0;
   margin: 6px 0;
   border-radius: 5px;
   display: flex;
+
   input {
-    margin-right: 5px;
     opacity: 0;
   }
   label {
     flex: 1;
+    
   }
   .label {
     text-decoration: line-through;
