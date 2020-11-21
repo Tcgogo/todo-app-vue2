@@ -44,11 +44,11 @@ export default {
   background: rgb(255, 255, 255);
   position: relative;
   min-height: 1rem;
-  padding: 0.2rem 0 0 1rem;
+  padding: 0 0 0 1rem;
   margin: 6px 0;
   border-radius: 5px;
   display: flex;
-
+  align-items: center;
   input {
     opacity: 0;
     position: absolute;
@@ -92,6 +92,7 @@ export default {
     background-color: #fff;
     border: none;
     outline: none;
+    margin-right: 0.1rem;
     &:hover {
       cursor: pointer;
       color: rgb(255, 0, 0);
