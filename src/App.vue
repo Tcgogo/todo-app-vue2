@@ -44,10 +44,8 @@ export default {
     TodoContent,
   },
   created() {
-    if(localStorage.length>1){
+    if(localStorage.getItem('todos')){
       this.todos = JSON.parse(localStorage.getItem('todos'));
-    } else {
-      console.log(this.todos)
     }
   },
   mounted() {
@@ -94,6 +92,7 @@ main {
   .container {
     width: 60%;
     max-width: 400px;
+    min-width: 300px;
     padding: 5vh 0;
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15);
     border-radius: 24px;
@@ -110,5 +109,11 @@ h1 {
   margin: 24px 0;
   font-size: 0.5rem;
   color: #414873;
+}
+
+@media screen and (max-width: 500px){
+  :root {
+    font-size: 30px;
+  }
 }
 </style>
