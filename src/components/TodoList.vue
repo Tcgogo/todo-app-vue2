@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import bus from '@/utils/bus';
+import bus from "@/utils/bus";
 
 export default {
   data() {
@@ -31,14 +31,16 @@ export default {
   methods: {
     changeActive(msg) {
       this.isAciveId = msg;
-      bus.$emit('changeList', msg)
+      bus.$emit("changeList", msg);
     },
   },
-
 };
 </script>
 <style lang="less" scoped>
 .todo-list {
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   padding: 2vh;
   font-size: 0.3rem;
   width: 70%;

@@ -44,13 +44,14 @@ export default {
   background: rgb(255, 255, 255);
   position: relative;
   min-height: 1rem;
-  padding: 0.2rem 30px 0;
+  padding: 0.2rem 0 0 1rem;
   margin: 6px 0;
   border-radius: 5px;
   display: flex;
 
   input {
     opacity: 0;
+    position: absolute;
   }
   label {
     flex: 1;
